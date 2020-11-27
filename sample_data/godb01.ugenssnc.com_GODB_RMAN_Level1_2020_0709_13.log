@@ -1,0 +1,735 @@
+
+###############################################################################
+####                                                                        ###
+#### TITLE     : godb1_history_log                                          ###
+#### DATA TIME : 2020-07-09 15:34:44                                        ###
+####                                                                        ###
+###############################################################################
+
+###***logname***###
+/ZFS/LOGS/Backup/GODB/GODB_2020_0709
+###***log***###
+ Delete Backup Pieces and Controlfiles older than 1Days
+"ZFS has been changed to Throughput mode: 2020-07-09_13:53:54"
+
+Recovery Manager: Release 12.2.0.1.0 - Production on Thu Jul 9 13:53:54 2020
+
+Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
+
+connected to target database: GODB (DBID=1206427760)
+using target database control file instead of recovery catalog
+
+RMAN> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 16> 17> 18> 19> 20> 21> 22> 23> 24> 25> 26> 27> 28> 29> 30> 31> 32> 33> 34> 35> 36> 37> 
+sql statement: alter system set "_backup_disk_bufcnt" = 64      scope=memory
+
+sql statement: alter system set "_backup_disk_bufsz"  = 1048576 scope=memory
+
+sql statement: alter system set "_backup_file_bufcnt" = 64      scope=memory
+
+sql statement: alter system set "_backup_file_bufsz"  = 1048576 scope=memory
+
+allocated channel: DCH1
+channel DCH1: SID=2862 instance=godb1 device type=DISK
+
+allocated channel: DCH2
+channel DCH2: SID=2992 instance=godb1 device type=DISK
+
+allocated channel: DCH3
+channel DCH3: SID=3057 instance=godb1 device type=DISK
+
+allocated channel: DCH4
+channel DCH4: SID=2 instance=godb1 device type=DISK
+
+allocated channel: DCH5
+channel DCH5: SID=67 instance=godb1 device type=DISK
+
+allocated channel: DCH6
+channel DCH6: SID=133 instance=godb1 device type=DISK
+
+allocated channel: DCH7
+channel DCH7: SID=198 instance=godb1 device type=DISK
+
+allocated channel: DCH8
+channel DCH8: SID=264 instance=godb1 device type=DISK
+
+Starting backup at 20/07/09
+channel DCH1: starting incremental level 1 datafile backup set
+channel DCH1: specifying datafile(s) in backup set
+input datafile file number=00001 name=+DATA/GODB/DATAFILE/system.260.1016321529
+channel DCH1: starting piece 1 at 20/07/09
+channel DCH2: starting incremental level 1 datafile backup set
+channel DCH2: specifying datafile(s) in backup set
+input datafile file number=00003 name=+DATA/GODB/DATAFILE/undotbs1.262.1016321533
+channel DCH2: starting piece 1 at 20/07/09
+channel DCH3: starting incremental level 1 datafile backup set
+channel DCH3: specifying datafile(s) in backup set
+input datafile file number=00275 name=/HAN/test_offline3.dbf
+input datafile file number=00274 name=/HAN/test_offline.dbf
+input datafile file number=00278 name=/HAN/test_YYS.dbf
+input datafile file number=00279 name=/HAN/test_YYS2.dbf
+input datafile file number=00276 name=/cloudfs/KCW/test_offline.dbf
+input datafile file number=00277 name=/cloudfs/KCW/test_offline2.dbf
+input datafile file number=00005 name=+DATA/GODB/DATAFILE/users.265.1016321543
+input datafile file number=00085 name=+DATA/GODB/DATAFILE/undotbs3.643.1038323109
+input datafile file number=00273 name=+DATA/GODB/DATAFILE/idp.648.1026666213
+input datafile file number=00004 name=+DATA/GODB/DATAFILE/undotbs2.264.1016321541
+input datafile file number=00006 name=+DATA/GODB/DATAFILE/dbmgr_tbs.274.1018564639
+input datafile file number=00007 name=+DATA/GODB/DATAFILE/xirs.355.1020205053
+input datafile file number=00008 name=+DATA/GODB/DATAFILE/ts_mis.357.1020205075
+channel DCH3: starting piece 1 at 20/07/09
+channel DCH4: starting incremental level 1 datafile backup set
+channel DCH4: specifying datafile(s) in backup set
+input datafile file number=00002 name=+DATA/GODB/DATAFILE/sysaux.261.1016321531
+channel DCH4: starting piece 1 at 20/07/09
+channel DCH5: starting incremental level 1 datafile backup set
+channel DCH5: specifying datafile(s) in backup set
+input datafile file number=00069 name=+DATA/GODB/DATAFILE/soe.418.1020205099
+channel DCH5: starting piece 1 at 20/07/09
+channel DCH6: starting incremental level 1 datafile backup set
+channel DCH6: specifying datafile(s) in backup set
+input datafile file number=00071 name=+DATA/GODB/DATAFILE/ts_ocs.420.1020205103
+channel DCH6: starting piece 1 at 20/07/09
+channel DCH7: starting incremental level 1 datafile backup set
+channel DCH7: specifying datafile(s) in backup set
+input datafile file number=00072 name=+DATA/GODB/DATAFILE/ts_ocs.421.1020205103
+channel DCH7: starting piece 1 at 20/07/09
+channel DCH8: starting incremental level 1 datafile backup set
+channel DCH8: specifying datafile(s) in backup set
+input datafile file number=00073 name=+DATA/GODB/DATAFILE/ts_ocs.422.1020205105
+channel DCH8: starting piece 1 at 20/07/09
+channel DCH2: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-UNDOTBS1_FNO-3 tag=ZFS_GODB comment=NONE
+channel DCH2: backup set complete, elapsed time: 00:00:02
+channel DCH2: starting incremental level 1 datafile backup set
+channel DCH2: specifying datafile(s) in backup set
+input datafile file number=00074 name=+DATA/GODB/DATAFILE/ts_ocs.423.1020205107
+channel DCH2: starting piece 1 at 20/07/09
+channel DCH5: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-SOE_FNO-69 tag=ZFS_GODB comment=NONE
+channel DCH5: backup set complete, elapsed time: 00:00:01
+channel DCH5: starting incremental level 1 datafile backup set
+channel DCH5: specifying datafile(s) in backup set
+input datafile file number=00075 name=+DATA/GODB/DATAFILE/ts_ocs.424.1020205109
+channel DCH5: starting piece 1 at 20/07/09
+channel DCH6: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TS_OCS_FNO-71 tag=ZFS_GODB comment=NONE
+channel DCH6: backup set complete, elapsed time: 00:00:01
+channel DCH6: starting incremental level 1 datafile backup set
+channel DCH6: specifying datafile(s) in backup set
+input datafile file number=00076 name=+DATA/GODB/DATAFILE/ts_ocs.425.1020206411
+channel DCH6: starting piece 1 at 20/07/09
+channel DCH7: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TS_OCS_FNO-72 tag=ZFS_GODB comment=NONE
+channel DCH7: backup set complete, elapsed time: 00:00:01
+channel DCH7: starting incremental level 1 datafile backup set
+channel DCH7: specifying datafile(s) in backup set
+input datafile file number=00077 name=+DATA/GODB/DATAFILE/ts_ocs.426.1020206533
+channel DCH7: starting piece 1 at 20/07/09
+channel DCH8: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_OCS_FNO-73 tag=ZFS_GODB comment=NONE
+channel DCH8: backup set complete, elapsed time: 00:00:01
+channel DCH8: starting incremental level 1 datafile backup set
+channel DCH8: specifying datafile(s) in backup set
+input datafile file number=00078 name=+DATA/GODB/DATAFILE/ts_ocs.427.1020206535
+channel DCH8: starting piece 1 at 20/07/09
+channel DCH1: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-SYSTEM_FNO-1 tag=ZFS_GODB comment=NONE
+channel DCH1: backup set complete, elapsed time: 00:00:02
+channel DCH1: starting incremental level 1 datafile backup set
+channel DCH1: specifying datafile(s) in backup set
+input datafile file number=00079 name=+DATA/GODB/DATAFILE/ts_ocs.428.1020206537
+channel DCH1: starting piece 1 at 20/07/09
+channel DCH3: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TS_MIS_FNO-8 tag=ZFS_GODB comment=NONE
+channel DCH3: backup set complete, elapsed time: 00:00:01
+channel DCH3: starting incremental level 1 datafile backup set
+channel DCH3: specifying datafile(s) in backup set
+input datafile file number=00080 name=+DATA/GODB/DATAFILE/ts_ocs.429.1020206539
+channel DCH3: starting piece 1 at 20/07/09
+channel DCH4: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-SYSAUX_FNO-2 tag=ZFS_GODB comment=NONE
+channel DCH4: backup set complete, elapsed time: 00:00:01
+channel DCH4: starting incremental level 1 datafile backup set
+channel DCH4: specifying datafile(s) in backup set
+input datafile file number=00070 name=+DATA/GODB/DATAFILE/soe.419.1020205101
+channel DCH4: starting piece 1 at 20/07/09
+channel DCH2: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TS_OCS_FNO-74 tag=ZFS_GODB comment=NONE
+channel DCH2: backup set complete, elapsed time: 00:00:01
+channel DCH2: starting incremental level 1 datafile backup set
+channel DCH2: specifying datafile(s) in backup set
+input datafile file number=00082 name=+DATA/GODB/DATAFILE/tb_godb.646.1036601007
+channel DCH2: starting piece 1 at 20/07/09
+channel DCH5: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TS_OCS_FNO-75 tag=ZFS_GODB comment=NONE
+channel DCH5: backup set complete, elapsed time: 00:00:01
+channel DCH5: starting incremental level 1 datafile backup set
+channel DCH5: specifying datafile(s) in backup set
+input datafile file number=00013 name=+DATA/GODB/DATAFILE/ts_emr.362.1020205077
+channel DCH5: starting piece 1 at 20/07/09
+channel DCH6: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TS_OCS_FNO-76 tag=ZFS_GODB comment=NONE
+channel DCH6: backup set complete, elapsed time: 00:00:01
+channel DCH6: starting incremental level 1 datafile backup set
+channel DCH6: specifying datafile(s) in backup set
+input datafile file number=00086 name=+DATA/GODB/DATAFILE/undotbs4.642.1038832231
+channel DCH6: starting piece 1 at 20/07/09
+channel DCH7: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TS_OCS_FNO-77 tag=ZFS_GODB comment=NONE
+channel DCH7: backup set complete, elapsed time: 00:00:01
+channel DCH7: starting incremental level 1 datafile backup set
+channel DCH7: specifying datafile(s) in backup set
+input datafile file number=00087 name=+DATA/GODB/DATAFILE/undotbs5.641.1038832665
+channel DCH7: starting piece 1 at 20/07/09
+channel DCH8: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_OCS_FNO-78 tag=ZFS_GODB comment=NONE
+channel DCH8: backup set complete, elapsed time: 00:00:01
+channel DCH8: starting incremental level 1 datafile backup set
+channel DCH8: specifying datafile(s) in backup set
+input datafile file number=00088 name=+DATA/GODB/DATAFILE/pse_tbs.637.1041584209
+channel DCH8: starting piece 1 at 20/07/09
+channel DCH1: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-TS_OCS_FNO-79 tag=ZFS_GODB comment=NONE
+channel DCH1: backup set complete, elapsed time: 00:00:01
+channel DCH1: starting incremental level 1 datafile backup set
+channel DCH1: specifying datafile(s) in backup set
+input datafile file number=00272 name=+DATA/GODB/DATAFILE/rpmmgr_tbs.647.1026575319
+channel DCH1: starting piece 1 at 20/07/09
+channel DCH3: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TS_OCS_FNO-80 tag=ZFS_GODB comment=NONE
+channel DCH3: backup set complete, elapsed time: 00:00:01
+channel DCH3: starting incremental level 1 datafile backup set
+channel DCH3: specifying datafile(s) in backup set
+input datafile file number=00286 name=+DATA/GODB/DATAFILE/ts_work.655.1032779615
+channel DCH3: starting piece 1 at 20/07/09
+channel DCH4: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-SOE_FNO-70 tag=ZFS_GODB comment=NONE
+channel DCH4: backup set complete, elapsed time: 00:00:00
+channel DCH4: starting incremental level 1 datafile backup set
+channel DCH4: specifying datafile(s) in backup set
+input datafile file number=00287 name=+DATA/GODB/DATAFILE/ts_work.656.1032779641
+channel DCH4: starting piece 1 at 20/07/09
+channel DCH2: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TB_GODB_FNO-82 tag=ZFS_GODB comment=NONE
+channel DCH2: backup set complete, elapsed time: 00:00:00
+channel DCH2: starting incremental level 1 datafile backup set
+channel DCH2: specifying datafile(s) in backup set
+input datafile file number=00009 name=+DATA/GODB/DATAFILE/ts_log.358.1020205075
+input datafile file number=00010 name=+DATA/GODB/DATAFILE/ts_lis.359.1020205075
+input datafile file number=00011 name=+DATA/GODB/DATAFILE/ts_itf.360.1020205075
+input datafile file number=00012 name=+DATA/GODB/DATAFILE/ts_hps.361.1020205077
+input datafile file number=00014 name=+DATA/GODB/DATAFILE/ts_edu.363.1020205079
+input datafile file number=00015 name=+DATA/GODB/DATAFILE/ts_cis.364.1020205079
+input datafile file number=00016 name=+DATA/GODB/DATAFILE/tirs.365.1020205079
+input datafile file number=00280 name=+DATA/GODB/DATAFILE/han_test.650.1032215123
+input datafile file number=00281 name=+DATA/GODB/DATAFILE/han1
+channel DCH2: starting piece 1 at 20/07/09
+channel DCH5: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TS_EMR_FNO-13 tag=ZFS_GODB comment=NONE
+channel DCH5: backup set complete, elapsed time: 00:00:01
+channel DCH5: starting incremental level 1 datafile backup set
+channel DCH5: specifying datafile(s) in backup set
+input datafile file number=00026 name=+DATA/GODB/DATAFILE/tb_ocs_aup.375.1020205083
+input datafile file number=00027 name=+DATA/GODB/DATAFILE/tb_mis_com.376.1020205083
+input datafile file number=00028 name=+DATA/GODB/DATAFILE/tb_log_com.377.1020205083
+input datafile file number=00029 name=+DATA/GODB/DATAFILE/tb_lob_com.378.1020205083
+input datafile file number=00030 name=+DATA/GODB/DATAFILE/tb_lis_lrs.379.1020205083
+input datafile file number=00031 name=+DATA/GODB/DATAFILE/tb_lis_com.380.1020205083
+input datafile file number=00032 name=+DATA/GODB/DATAFILE/tb_itf_com.381.1020205083
+input datafile file number=00033 name=+DATA/GODB/DATAFILE/tb_hps_het.382.1020205085
+input datafile file number=00034 name=+DATA/GODB/DATAFILE/tb_hps_com.383.1020205085
+input datafile file number=00284 name=+DATA/GODB/DATAFILE/han4
+input datafile file number=00285 name=+DATA/GODB/DATAFILE/han5
+channel DCH5: starting piece 1 at 20/07/09
+channel DCH1: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-RPMMGR_TBS_FNO-272 tag=ZFS_GODB comment=NONE
+channel DCH1: backup set complete, elapsed time: 00:00:01
+channel DCH1: starting incremental level 1 datafile backup set
+channel DCH1: specifying datafile(s) in backup set
+input datafile file number=00017 name=+DATA/GODB/DATAFILE/tb_tde_com.366.1020205079
+input datafile file number=00018 name=+DATA/GODB/DATAFILE/tb_ocs_pso.367.1020205079
+input datafile file number=00019 name=+DATA/GODB/DATAFILE/tb_ocs_pop.368.1020205081
+input datafile file number=00020 name=+DATA/GODB/DATAFILE/tb_ocs_ocs.369.1020205081
+input datafile file number=00021 name=+DATA/GODB/DATAFILE/tb_ocs_ics.370.1020205081
+input datafile file number=00022 name=+DATA/GODB/DATAFILE/tb_ocs_dro.371.1020205081
+input datafile file number=00023 name=+DATA/GODB/DATAFILE/tb_ocs_cpo.372.1020205081
+input datafile file number=00024 name=+DATA/GODB/DATAFILE/tb_ocs_com.373.1020205081
+input datafile file number=00025 name=+DATA/GODB/DATAFILE/tb_ocs_ceo.374.1020205081
+input datafile file number=00282 name=+DATA/GODB/DATAFILE/han2
+input datafile file number=00283 name=+DATA/GODB/DATAFILE/han3
+channel DCH1: starting piece 1 at 20/07/09
+channel DCH8: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-PSE_TBS_FNO-88 tag=ZFS_GODB comment=NONE
+channel DCH8: backup set complete, elapsed time: 00:00:01
+channel DCH8: starting incremental level 1 datafile backup set
+channel DCH8: specifying datafile(s) in backup set
+input datafile file number=00035 name=+DATA/GODB/DATAFILE/tb_gin_com.384.1020205085
+input datafile file number=00036 name=+DATA/GODB/DATAFILE/tb_emr_rcc.385.1020205085
+input datafile file number=00037 name=+DATA/GODB/DATAFILE/tb_emr_rac.386.1020205087
+input datafile file number=00038 name=+DATA/GODB/DATAFILE/tb_emr_mnp.387.1020205087
+input datafile file number=00039 name=+DATA/GODB/DATAFILE/tb_emr_mfc.388.1020205087
+input datafile file number=00040 name=+DATA/GODB/DATAFILE/tb_emr_com.389.1020205087
+input datafile file number=00041 name=+DATA/GODB/DATAFILE/tb_edu_com.390.1020205087
+input datafile file number=00042 name=+DATA/GODB/DATAFILE/tb_cis_com.391.1020205087
+input datafile file number=00043 name=+DATA/GODB/DATAFILE/ix_tde_com.392.1020205087
+channel DCH8: starting piece 1 at 20/07/09
+channel DCH3: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TS_WORK_FNO-286 tag=ZFS_GODB comment=NONE
+channel DCH3: backup set complete, elapsed time: 00:00:01
+channel DCH3: starting incremental level 1 datafile backup set
+channel DCH3: specifying datafile(s) in backup set
+input datafile file number=00044 name=+DATA/GODB/DATAFILE/ix_ocs_pso.393.1020205089
+input datafile file number=00045 name=+DATA/GODB/DATAFILE/ix_ocs_pop.394.1020205089
+input datafile file number=00046 name=+DATA/GODB/DATAFILE/ix_ocs_ocs.395.1020205089
+input datafile file number=00047 name=+DATA/GODB/DATAFILE/ix_ocs_ics.396.1020205089
+input datafile file number=00048 name=+DATA/GODB/DATAFILE/ix_ocs_dro.397.1020205089
+input datafile file number=00049 name=+DATA/GODB/DATAFILE/ix_ocs_cpo.398.1020205091
+input datafile file number=00050 name=+DATA/GODB/DATAFILE/ix_ocs_com.399.1020205091
+input datafile file number=00051 name=+DATA/GODB/DATAFILE/ix_ocs_ceo.400.1020205091
+input datafile file number=00052 name=+DATA/GODB/DATAFILE/ix_ocs_aup.401.1020205093
+channel DCH3: starting piece 1 at 20/07/09
+channel DCH4: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TS_WORK_FNO-287 tag=ZFS_GODB comment=NONE
+channel DCH4: backup set complete, elapsed time: 00:00:02
+channel DCH4: starting incremental level 1 datafile backup set
+channel DCH4: specifying datafile(s) in backup set
+input datafile file number=00053 name=+DATA/GODB/DATAFILE/ix_mis_com.402.1020205093
+input datafile file number=00054 name=+DATA/GODB/DATAFILE/ix_log_com.403.1020205093
+input datafile file number=00055 name=+DATA/GODB/DATAFILE/ix_lob_com.404.1020205093
+input datafile file number=00056 name=+DATA/GODB/DATAFILE/ix_lis_lrs.405.1020205093
+input datafile file number=00057 name=+DATA/GODB/DATAFILE/ix_lis_com.406.1020205093
+input datafile file number=00058 name=+DATA/GODB/DATAFILE/ix_itf_com.407.1020205093
+input datafile file number=00059 name=+DATA/GODB/DATAFILE/ix_hps_het.408.1020205095
+input datafile file number=00060 name=+DATA/GODB/DATAFILE/ix_hps_com.409.1020205095
+input datafile file number=00061 name=+DATA/GODB/DATAFILE/ix_gin_com.410.1020205095
+channel DCH4: starting piece 1 at 20/07/09
+channel DCH1: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-HAN_TEST_FNO-283 tag=ZFS_GODB comment=NONE
+channel DCH1: backup set complete, elapsed time: 00:00:02
+channel DCH1: starting incremental level 1 datafile backup set
+channel DCH1: specifying datafile(s) in backup set
+input datafile file number=00062 name=+DATA/GODB/DATAFILE/ix_emr_rcc.411.1020205095
+input datafile file number=00063 name=+DATA/GODB/DATAFILE/ix_emr_rac.412.1020205095
+input datafile file number=00064 name=+DATA/GODB/DATAFILE/ix_emr_mnp.413.1020205095
+input datafile file number=00065 name=+DATA/GODB/DATAFILE/ix_emr_mfc.414.1020205097
+input datafile file number=00066 name=+DATA/GODB/DATAFILE/ix_emr_com.415.1020205097
+input datafile file number=00067 name=+DATA/GODB/DATAFILE/ix_edu_com.416.1020205097
+input datafile file number=00068 name=+DATA/GODB/DATAFILE/ix_cis_com.417.1020205097
+input datafile file number=00083 name=+DATA/GODB/DATAFILE/iops.729.1037374297
+input datafile file number=00084 name=+DATA/GODB/DATAFILE/yys.273.1038319549
+channel DCH1: starting piece 1 at 20/07/09
+channel DCH5: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-HAN_TEST_FNO-285 tag=ZFS_GODB comment=NONE
+channel DCH5: backup set complete, elapsed time: 00:00:02
+channel DCH5: starting incremental level 1 datafile backup set
+channel DCH5: specifying datafile(s) in backup set
+input datafile file number=00081 name=+DATA/GODB/DATAFILE/tb_godb.730.1036600953
+input datafile file number=00089 name=+DATA/GODB/DATAFILE/pse_tbs.628.1041584213
+input datafile file number=00090 name=+DATA/GODB/DATAFILE/test11.635.1042903369
+input datafile file number=00091 name=+DATA/GODB/DATAFILE/rcatalog001
+channel DCH5: starting piece 1 at 20/07/09
+channel DCH1: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-YYS_FNO-84 tag=ZFS_GODB comment=NONE
+channel DCH1: backup set complete, elapsed time: 00:00:01
+channel DCH2: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-HAN_TEST_FNO-281 tag=ZFS_GODB comment=NONE
+channel DCH2: backup set complete, elapsed time: 00:00:03
+channel DCH3: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-IX_OCS_AUP_FNO-52 tag=ZFS_GODB comment=NONE
+channel DCH3: backup set complete, elapsed time: 00:00:02
+channel DCH4: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-IX_GIN_COM_FNO-61 tag=ZFS_GODB comment=NONE
+channel DCH4: backup set complete, elapsed time: 00:00:02
+channel DCH5: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-RCAT_FNO-91 tag=ZFS_GODB comment=NONE
+channel DCH5: backup set complete, elapsed time: 00:00:01
+channel DCH6: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-UNDOTBS4_FNO-86 tag=ZFS_GODB comment=NONE
+channel DCH6: backup set complete, elapsed time: 00:00:04
+channel DCH8: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-IX_TDE_COM_FNO-43 tag=ZFS_GODB comment=NONE
+channel DCH8: backup set complete, elapsed time: 00:00:03
+channel DCH7: finished piece 1 at 20/07/09
+piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-UNDOTBS5_FNO-87 tag=ZFS_GODB comment=NONE
+channel DCH7: backup set complete, elapsed time: 00:00:06
+Finished backup at 20/07/09
+
+Starting Control File Autobackup at 20/07/09
+piece handle=/cloudfs/KYH/01RMAN_TEST/KYH_control_c-1206427760-20200709-00 comment=NONE
+Finished Control File Autobackup at 20/07/09
+
+released channel: DCH1
+
+released channel: DCH2
+
+released channel: DCH3
+
+released channel: DCH4
+
+released channel: DCH5
+
+released channel: DCH6
+
+released channel: DCH7
+
+released channel: DCH8
+
+Starting backup at 20/07/09
+allocated channel: ORA_DISK_1
+channel ORA_DISK_1: SID=2862 instance=godb1 device type=DISK
+allocated channel: ORA_DISK_2
+channel ORA_DISK_2: SID=2992 instance=godb1 device type=DISK
+allocated channel: ORA_DISK_3
+channel ORA_DISK_3: SID=3057 instance=godb1 device type=DISK
+allocated channel: ORA_DISK_4
+channel ORA_DISK_4: SID=2 instance=godb1 device type=DISK
+channel ORA_DISK_1: starting datafile copy
+copying current control file
+output file name=/ZFS/BACKUP/DATA_GODB_01/control_backup.ctl tag=CTRL_COPY RECID=3387 STAMP=1045317262
+channel ORA_DISK_1: datafile copy complete, elapsed time: 00:00:01
+Finished backup at 20/07/09
+
+Starting Control File Autobackup at 20/07/09
+piece handle=/cloudfs/KYH/01RMAN_TEST/KYH_control_c-1206427760-20200709-01 comment=NONE
+Finished Control File Autobackup at 20/07/09
+
+RMAN> 
+
+Recovery Manager complete.
+" ZFS has been changed to Latency mode: 2020-07-09_13:54:32"
+
+Recovery Manager: Release 12.2.0.1.0 - Production on Thu Jul 9 13:54:32 2020
+
+Copyright (c) 1982, 2017, Oracle and/or its affiliates.  All rights reserved.
+
+connected to target database: GODB (DBID=1206427760)
+using target database control file instead of recovery catalog
+
+RMAN> 2> 3> 4> 5> 6> 7> 8> 9> 10> 11> 12> 13> 14> 15> 16> 17> 18> 19> 20> 21> 22> 23> 24> 25> 26> 27> 28> 29> 30> 31> 32> 
+sql statement: alter system set "_backup_disk_bufcnt" = 64      scope=memory
+
+sql statement: alter system set "_backup_disk_bufsz"  = 1048576 scope=memory
+
+sql statement: alter system set "_backup_file_bufcnt" = 64      scope=memory
+
+sql statement: alter system set "_backup_file_bufsz"  = 1048576 scope=memory
+
+allocated channel: DCH1
+channel DCH1: SID=2472 instance=godb1 device type=DISK
+
+allocated channel: DCH2
+channel DCH2: SID=2797 instance=godb1 device type=DISK
+
+allocated channel: DCH3
+channel DCH3: SID=2862 instance=godb1 device type=DISK
+
+allocated channel: DCH4
+channel DCH4: SID=2927 instance=godb1 device type=DISK
+
+allocated channel: DCH5
+channel DCH5: SID=2992 instance=godb1 device type=DISK
+
+allocated channel: DCH6
+channel DCH6: SID=3057 instance=godb1 device type=DISK
+
+allocated channel: DCH7
+channel DCH7: SID=2 instance=godb1 device type=DISK
+
+allocated channel: DCH8
+channel DCH8: SID=67 instance=godb1 device type=DISK
+
+Starting recover at 20/07/09
+no copy of datafile 1 found to recover
+no copy of datafile 3 found to recover
+no copy of datafile 61 found to recover
+no copy of datafile 76 found to recover
+no copy of datafile 86 found to recover
+no copy of datafile 87 found to recover
+no copy of datafile 285 found to recover
+no copy of datafile 286 found to recover
+channel DCH1: starting incremental datafile backup set restore
+channel DCH1: specifying datafile copies to recover
+recovering datafile copy file number=00071 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TS_OCS_FNO-71
+channel DCH1: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TS_OCS_FNO-71
+channel DCH2: starting incremental datafile backup set restore
+channel DCH2: specifying datafile copies to recover
+recovering datafile copy file number=00073 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TS_OCS_FNO-73
+channel DCH2: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_OCS_FNO-73
+channel DCH3: starting incremental datafile backup set restore
+channel DCH3: specifying datafile copies to recover
+recovering datafile copy file number=00002 name=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-SYSAUX_FNO-2
+channel DCH3: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-SYSAUX_FNO-2
+channel DCH4: starting incremental datafile backup set restore
+channel DCH4: specifying datafile copies to recover
+recovering datafile copy file number=00004 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-UNDOTBS2_FNO-4
+recovering datafile copy file number=00005 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-USERS_FNO-5
+recovering datafile copy file number=00006 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-DBMGR_TBS_FNO-6
+recovering datafile copy file number=00007 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-XIRS_FNO-7
+recovering datafile copy file number=00008 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TS_MIS_FNO-8
+recovering datafile copy file number=00085 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-UNDOTBS3_FNO-85
+recovering datafile copy file number=00273 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-IDP_FNO-273
+recovering datafile copy file number=00274 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TEST_OFFLINE_FNO-274
+recovering datafile copy file number=00275 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TEST_OFFLINE_FNO-275
+recovering datafile copy file number=00276 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TEST_OFFLINE_K_FNO-276
+recovering datafile copy file number=00277 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TEST_OFFLINE_K_FNO-277
+recovering datafile copy file number=00278 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TEST_YYS_FNO-278
+recovering datafile copy file number=00279 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TEST_YYS_FNO-279
+channel DCH4: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TS_MIS_FNO-8
+channel DCH5: starting incremental datafile backup set restore
+channel DCH5: specifying datafile copies to recover
+recovering datafile copy file number=00069 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-SOE_FNO-69
+channel DCH5: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-SOE_FNO-69
+channel DCH6: starting incremental datafile backup set restore
+channel DCH6: specifying datafile copies to recover
+recovering datafile copy file number=00072 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TS_OCS_FNO-72
+channel DCH6: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TS_OCS_FNO-72
+channel DCH7: starting incremental datafile backup set restore
+channel DCH7: specifying datafile copies to recover
+recovering datafile copy file number=00074 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_OCS_FNO-74
+channel DCH7: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TS_OCS_FNO-74
+channel DCH8: starting incremental datafile backup set restore
+channel DCH8: specifying datafile copies to recover
+recovering datafile copy file number=00013 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TS_EMR_FNO-13
+channel DCH8: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TS_EMR_FNO-13
+channel DCH1: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TS_OCS_FNO-71 tag=ZFS_GODB
+channel DCH1: restored backup piece 1
+channel DCH1: restore complete, elapsed time: 00:00:00
+channel DCH1: starting incremental datafile backup set restore
+channel DCH1: specifying datafile copies to recover
+recovering datafile copy file number=00070 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-SOE_FNO-70
+channel DCH1: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-SOE_FNO-70
+channel DCH2: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_OCS_FNO-73 tag=ZFS_GODB
+channel DCH2: restored backup piece 1
+channel DCH2: restore complete, elapsed time: 00:00:00
+channel DCH2: starting incremental datafile backup set restore
+channel DCH2: specifying datafile copies to recover
+recovering datafile copy file number=00075 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TS_OCS_FNO-75
+channel DCH2: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TS_OCS_FNO-75
+channel DCH5: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-SOE_FNO-69 tag=ZFS_GODB
+channel DCH5: restored backup piece 1
+channel DCH5: restore complete, elapsed time: 00:00:00
+channel DCH5: starting incremental datafile backup set restore
+channel DCH5: specifying datafile copies to recover
+recovering datafile copy file number=00077 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_OCS_FNO-77
+channel DCH5: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TS_OCS_FNO-77
+channel DCH6: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TS_OCS_FNO-72 tag=ZFS_GODB
+channel DCH6: restored backup piece 1
+channel DCH6: restore complete, elapsed time: 00:00:01
+channel DCH6: starting incremental datafile backup set restore
+channel DCH6: specifying datafile copies to recover
+recovering datafile copy file number=00078 name=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TS_OCS_FNO-78
+channel DCH6: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_OCS_FNO-78
+channel DCH7: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TS_OCS_FNO-74 tag=ZFS_GODB
+channel DCH7: restored backup piece 1
+channel DCH7: restore complete, elapsed time: 00:00:01
+channel DCH7: starting incremental datafile backup set restore
+channel DCH7: specifying datafile copies to recover
+recovering datafile copy file number=00079 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TS_OCS_FNO-79
+channel DCH7: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-TS_OCS_FNO-79
+channel DCH1: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-SOE_FNO-70 tag=ZFS_GODB
+channel DCH1: restored backup piece 1
+channel DCH1: restore complete, elapsed time: 00:00:01
+channel DCH1: starting incremental datafile backup set restore
+channel DCH1: specifying datafile copies to recover
+recovering datafile copy file number=00080 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TS_OCS_FNO-80
+channel DCH1: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TS_OCS_FNO-80
+channel DCH2: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TS_OCS_FNO-75 tag=ZFS_GODB
+channel DCH2: restored backup piece 1
+channel DCH2: restore complete, elapsed time: 00:00:01
+channel DCH2: starting incremental datafile backup set restore
+channel DCH2: specifying datafile copies to recover
+recovering datafile copy file number=00082 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TB_GODB_FNO-82
+channel DCH2: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TB_GODB_FNO-82
+channel DCH5: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TS_OCS_FNO-77 tag=ZFS_GODB
+channel DCH5: restored backup piece 1
+channel DCH5: restore complete, elapsed time: 00:00:01
+channel DCH5: starting incremental datafile backup set restore
+channel DCH5: specifying datafile copies to recover
+recovering datafile copy file number=00088 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-PSE_TBS_FNO-88
+channel DCH5: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-PSE_TBS_FNO-88
+channel DCH8: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TS_EMR_FNO-13 tag=ZFS_GODB
+channel DCH8: restored backup piece 1
+channel DCH8: restore complete, elapsed time: 00:00:01
+channel DCH8: starting incremental datafile backup set restore
+channel DCH8: specifying datafile copies to recover
+recovering datafile copy file number=00272 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-RPMMGR_TBS_FNO-272
+channel DCH8: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-RPMMGR_TBS_FNO-272
+channel DCH1: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TS_OCS_FNO-80 tag=ZFS_GODB
+channel DCH1: restored backup piece 1
+channel DCH1: restore complete, elapsed time: 00:00:00
+channel DCH1: starting incremental datafile backup set restore
+channel DCH1: specifying datafile copies to recover
+recovering datafile copy file number=00287 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TS_WORK_FNO-287
+channel DCH1: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TS_WORK_FNO-287
+channel DCH2: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TB_GODB_FNO-82 tag=ZFS_GODB
+channel DCH2: restored backup piece 1
+channel DCH2: restore complete, elapsed time: 00:00:00
+channel DCH2: starting incremental datafile backup set restore
+channel DCH2: specifying datafile copies to recover
+recovering datafile copy file number=00017 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TB_TDE_COM_FNO-17
+recovering datafile copy file number=00018 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TB_OCS_PSO_FNO-18
+recovering datafile copy file number=00019 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TB_OCS_POP_FNO-19
+recovering datafile copy file number=00020 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TB_OCS_OCS_FNO-20
+recovering datafile copy file number=00021 name=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TB_OCS_ICS_FNO-21
+recovering datafile copy file number=00022 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TB_OCS_DRO_FNO-22
+recovering datafile copy file number=00023 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TB_OCS_CPO_FNO-23
+recovering datafile copy file number=00024 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TB_OCS_COM_FNO-24
+recovering datafile copy file number=00025 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TB_OCS_CEO_FNO-25
+recovering datafile copy file number=00282 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-HAN_TEST_FNO-282
+recovering datafile copy file number=00283 name=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-HAN_TEST_FNO-283
+channel DCH2: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-HAN_TEST_FNO-283
+channel DCH6: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_OCS_FNO-78 tag=ZFS_GODB
+channel DCH6: restored backup piece 1
+channel DCH6: restore complete, elapsed time: 00:00:00
+channel DCH6: starting incremental datafile backup set restore
+channel DCH6: specifying datafile copies to recover
+recovering datafile copy file number=00026 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TB_OCS_AUP_FNO-26
+recovering datafile copy file number=00027 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TB_MIS_COM_FNO-27
+recovering datafile copy file number=00028 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TB_LOG_COM_FNO-28
+recovering datafile copy file number=00029 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TB_LOB_COM_FNO-29
+recovering datafile copy file number=00030 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TB_LIS_LRS_FNO-30
+recovering datafile copy file number=00031 name=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TB_LIS_COM_FNO-31
+recovering datafile copy file number=00032 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TB_ITF_COM_FNO-32
+recovering datafile copy file number=00033 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-TB_HPS_HET_FNO-33
+recovering datafile copy file number=00034 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TB_HPS_COM_FNO-34
+recovering datafile copy file number=00284 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-HAN_TEST_FNO-284
+channel DCH6: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-HAN_TEST_FNO-285
+channel DCH7: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-TS_OCS_FNO-79 tag=ZFS_GODB
+channel DCH7: restored backup piece 1
+channel DCH7: restore complete, elapsed time: 00:00:00
+channel DCH7: starting incremental datafile backup set restore
+channel DCH7: specifying datafile copies to recover
+recovering datafile copy file number=00009 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TS_LOG_FNO-9
+recovering datafile copy file number=00010 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TS_LIS_FNO-10
+recovering datafile copy file number=00011 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TS_ITF_FNO-11
+recovering datafile copy file number=00012 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_HPS_FNO-12
+recovering datafile copy file number=00014 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TS_EDU_FNO-14
+recovering datafile copy file number=00015 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TS_CIS_FNO-15
+recovering datafile copy file number=00016 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TIRS_FNO-16
+recovering datafile copy file number=00280 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-HAN_TEST_FNO-280
+recovering datafile copy file number=00281 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-HAN_TEST_FNO-281
+channel DCH7: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-HAN_TEST_FNO-281
+channel DCH1: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TS_WORK_FNO-287 tag=ZFS_GODB
+channel DCH1: restored backup piece 1
+channel DCH1: restore complete, elapsed time: 00:00:00
+channel DCH1: starting incremental datafile backup set restore
+channel DCH1: specifying datafile copies to recover
+recovering datafile copy file number=00035 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TB_GIN_COM_FNO-35
+recovering datafile copy file number=00036 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TB_EMR_RCC_FNO-36
+recovering datafile copy file number=00037 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-TB_EMR_RAC_FNO-37
+recovering datafile copy file number=00038 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-TB_EMR_MNP_FNO-38
+recovering datafile copy file number=00039 name=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TB_EMR_MFC_FNO-39
+recovering datafile copy file number=00040 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TB_EMR_COM_FNO-40
+recovering datafile copy file number=00041 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-TB_EDU_COM_FNO-41
+recovering datafile copy file number=00042 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TB_CIS_COM_FNO-42
+recovering datafile copy file number=00043 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-IX_TDE_COM_FNO-43
+channel DCH1: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-IX_TDE_COM_FNO-43
+channel DCH5: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-PSE_TBS_FNO-88 tag=ZFS_GODB
+channel DCH5: restored backup piece 1
+channel DCH5: restore complete, elapsed time: 00:00:00
+channel DCH5: starting incremental datafile backup set restore
+channel DCH5: specifying datafile copies to recover
+recovering datafile copy file number=00044 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-IX_OCS_PSO_FNO-44
+recovering datafile copy file number=00045 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-IX_OCS_POP_FNO-45
+recovering datafile copy file number=00046 name=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-IX_OCS_OCS_FNO-46
+recovering datafile copy file number=00047 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-IX_OCS_ICS_FNO-47
+recovering datafile copy file number=00048 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-IX_OCS_DRO_FNO-48
+recovering datafile copy file number=00049 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-IX_OCS_CPO_FNO-49
+recovering datafile copy file number=00050 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-IX_OCS_COM_FNO-50
+recovering datafile copy file number=00051 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-IX_OCS_CEO_FNO-51
+recovering datafile copy file number=00052 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-IX_OCS_AUP_FNO-52
+channel DCH5: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-IX_OCS_AUP_FNO-52
+channel DCH8: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-RPMMGR_TBS_FNO-272 tag=ZFS_GODB
+channel DCH8: restored backup piece 1
+channel DCH8: restore complete, elapsed time: 00:00:01
+channel DCH8: starting incremental datafile backup set restore
+channel DCH8: specifying datafile copies to recover
+recovering datafile copy file number=00053 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-IX_MIS_COM_FNO-53
+recovering datafile copy file number=00054 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-IX_LOG_COM_FNO-54
+recovering datafile copy file number=00055 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-IX_LOB_COM_FNO-55
+recovering datafile copy file number=00056 name=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-IX_LIS_LRS_FNO-56
+recovering datafile copy file number=00057 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-IX_LIS_COM_FNO-57
+recovering datafile copy file number=00058 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-IX_ITF_COM_FNO-58
+recovering datafile copy file number=00059 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-IX_HPS_HET_FNO-59
+recovering datafile copy file number=00060 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-IX_HPS_COM_FNO-60
+channel DCH8: reading from backup piece /ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-IX_GIN_COM_FNO-61
+channel DCH1: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-IX_TDE_COM_FNO-43 tag=ZFS_GODB
+channel DCH1: restored backup piece 1
+channel DCH1: restore complete, elapsed time: 00:00:02
+channel DCH1: starting incremental datafile backup set restore
+channel DCH1: specifying datafile copies to recover
+recovering datafile copy file number=00062 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-IX_EMR_RCC_FNO-62
+recovering datafile copy file number=00063 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-IX_EMR_RAC_FNO-63
+recovering datafile copy file number=00064 name=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-IX_EMR_MNP_FNO-64
+recovering datafile copy file number=00065 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-IX_EMR_MFC_FNO-65
+recovering datafile copy file number=00066 name=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-IX_EMR_COM_FNO-66
+recovering datafile copy file number=00067 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-IX_EDU_COM_FNO-67
+recovering datafile copy file number=00068 name=/ZFS/BACKUP/DATA_GODB_01/DCH7/data_GODB-I-1206427760_TS-IX_CIS_COM_FNO-68
+recovering datafile copy file number=00083 name=/ZFS/BACKUP/DATA_GODB_02/DCH8/data_GODB-I-1206427760_TS-IOPS_FNO-83
+recovering datafile copy file number=00084 name=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-YYS_FNO-84
+channel DCH1: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-YYS_FNO-84
+channel DCH2: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-HAN_TEST_FNO-283 tag=ZFS_GODB
+channel DCH2: restored backup piece 1
+channel DCH2: restore complete, elapsed time: 00:00:03
+channel DCH2: starting incremental datafile backup set restore
+channel DCH2: specifying datafile copies to recover
+recovering datafile copy file number=00081 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-TB_GODB_FNO-81
+recovering datafile copy file number=00089 name=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-PSE_TBS_FNO-89
+recovering datafile copy file number=00090 name=/ZFS/BACKUP/DATA_GODB_02/DCH6/data_GODB-I-1206427760_TS-TEST11_FNO-90
+recovering datafile copy file number=00091 name=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-RCAT_FNO-91
+channel DCH2: reading from backup piece /ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-RCAT_FNO-91
+channel DCH5: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-IX_OCS_AUP_FNO-52 tag=ZFS_GODB
+channel DCH5: restored backup piece 1
+channel DCH5: restore complete, elapsed time: 00:00:02
+channel DCH7: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH2/data_GODB-I-1206427760_TS-HAN_TEST_FNO-281 tag=ZFS_GODB
+channel DCH7: restored backup piece 1
+channel DCH7: restore complete, elapsed time: 00:00:03
+channel DCH8: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-IX_GIN_COM_FNO-61 tag=ZFS_GODB
+channel DCH8: restored backup piece 1
+channel DCH8: restore complete, elapsed time: 00:00:02
+channel DCH2: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-RCAT_FNO-91 tag=ZFS_GODB
+channel DCH2: restored backup piece 1
+channel DCH2: restore complete, elapsed time: 00:00:01
+channel DCH6: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH5/data_GODB-I-1206427760_TS-HAN_TEST_FNO-285 tag=ZFS_GODB
+channel DCH6: restored backup piece 1
+channel DCH6: restore complete, elapsed time: 00:00:04
+channel DCH1: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH1/data_GODB-I-1206427760_TS-YYS_FNO-84 tag=ZFS_GODB
+channel DCH1: restored backup piece 1
+channel DCH1: restore complete, elapsed time: 00:00:04
+channel DCH4: piece handle=/ZFS/BACKUP/DATA_GODB_01/DCH3/data_GODB-I-1206427760_TS-TS_MIS_FNO-8 tag=ZFS_GODB
+channel DCH4: restored backup piece 1
+channel DCH4: restore complete, elapsed time: 00:00:07
+channel DCH3: piece handle=/ZFS/BACKUP/DATA_GODB_02/DCH4/data_GODB-I-1206427760_TS-SYSAUX_FNO-2 tag=ZFS_GODB
+channel DCH3: restored backup piece 1
+channel DCH3: restore complete, elapsed time: 00:00:11
+Finished recover at 20/07/09
+
+Starting Control File Autobackup at 20/07/09
+piece handle=/cloudfs/KYH/01RMAN_TEST/KYH_control_c-1206427760-20200709-02 comment=NONE
+Finished Control File Autobackup at 20/07/09
+
+released channel: DCH1
+
+released channel: DCH2
+
+released channel: DCH3
+
+released channel: DCH4
+
+released channel: DCH5
+
+released channel: DCH6
+
+released channel: DCH7
+
+released channel: DCH8
+
+RMAN> 
+
+Recovery Manager complete.
+=========================================================================================================
+
+
+###############################################################################
+####  END  -  DATA TIME : 2020-07-09 15:34:44                                ###
+###############################################################################

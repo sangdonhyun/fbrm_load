@@ -1,0 +1,8 @@
+SYS@UPGR > select * from v$database;
+select * from v$database
+*
+ERROR at line 1:
+ORA-01507: database not mounted
+
+
+SYS@UPGR > spool off

@@ -1,0 +1,195 @@
+curl --user root:welcome1 -k -i https://192.168.0.184:215
+HTTP/1.1 200 OK
+Date: Fri, 10 Jul 2020 06:29:19 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Last-Modified: Thu, 18 May 2017 22:21:15 GMT
+ETag: "80c-54fd3d2b00cc0"
+Accept-Ranges: bytes
+Content-Length: 2060
+Vary: Accept-Encoding
+Content-Type: text/html; charset=ISO-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!--
+    Copyright 2007 Sun Microsystems, Inc.  All rights reserved.
+    Use is subject to license terms.
+
+    ident	"@(#)index.html	1.62	07/09/28 SMI"
+-->
+<script type='text/javascript' src='/lib/ak/akError.js'></script>
+<script type='text/javascript' charset='utf-8' src='/lib/ak/common/index.js'></script>
+<script type='text/javascript' charset='utf-8' src='/lib/ak/index.js'></script>
+<script type='text/javascript' charset='utf-8' src='/lib/crazyolait/index.js'></script>
+<script type='text/javascript' charset='utf-8' src='/lib/d3/index.js'></script>
+<script type='text/javascript' charset='utf-8' src='/lib/raphael/index.js'></script>
+<script type='text/javascript' src='/ak/localized/lib/ak/msg/aktext.po.js'></script>
+<script type='text/javascript' src='/ak/localized/appliance/generic/msg/aktxt.po.js'></script>
+<script type='text/javascript' charset='utf-8' src='/appliance/generic/common/index.js'></script>
+<script type='text/javascript' charset='utf-8' src='/appliance/generic/index.js'></script>
+<script type='text/javascript' src='/ak/localized/appliance/nas/msg/aktxt.po.js'></script>
+<script type='text/javascript' charset='utf-8' src='/appliance/nas/common/index.js'></script>
+<script type='text/javascript' charset='utf-8' src='/appliance/nas/index.js'></script>
+<script type='text/javascript' charset='utf-8' src='/appliance/SUNW,otoroZ3/common/index.js'></script>
+<script type='text/javascript' charset='utf-8' src='/appliance/SUNW,otoroZ3/index.js'></script>
+<link rel='stylesheet' type='text/css' href='/theme/sun/index.css'>
+<link rel='stylesheet' type='text/css' href='/appliance/generic/theme/sun/index.css'>
+<link rel='stylesheet' type='text/css' href='/appliance/nas/theme/sun/index.css'>
+<link rel='stylesheet' type='text/css' href='/appliance/SUNW,otoroZ3/theme/sun/index.css'>
+</head>
+<body bgcolor=#3F4654>
+<noscript>
+This page needs JavaScript
+</noscript>
+</body>
+</html>
+
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools
+HTTP/1.1 200 OK
+Date: Fri, 10 Jul 2020 06:29:19 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Length: 760
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+
+{"pools": [{"status": "exported", "name": "Pool2", "peer": "UZFS02", "usage": {}, "href": "/api/storage/v1/pools/Pool2", "owner": "UZFS02", "asn": "3e4c4f54-52a8-e57e-e228-cfae185cf665"}, {"status": "online", "profile": "mirror_nspf", "name": "Pool1", "usage": {"available": 68707386220544.0, "usage_snapshots": 516809203712.0, "usage_metasize": 0.0, "used": 697032445952.0, "compression": 1.0, "usage_child_reservation": 0.0, "usage_replication": 0.0, "usage_data": 180223242240.0, "usage_reservation": 0.0, "free": 68707386220544.0, "dedupratio": 100, "usage_metaused": 0.0, "total": 70506183131136.0, "usage_total": 697032445952.0}, "peer": "UZFS02", "href": "/api/storage/v1/pools/Pool1", "owner": "UZFS01", "asn": "6ba74d18-c828-645d-bffa-cfdacf4c86de"}]}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool1/projects
+HTTP/1.1 200 OK
+Date: Fri, 10 Jul 2020 06:29:20 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+Transfer-Encoding: chunked
+
+{"projects":[{"snapdir": "hidden", "default_volblocksize": 8192.0, "defaultgroupquota": 0.0, "logbias": "latency", "creation": "20200708T04:21:38", "nodestroy": false, "dedup": false, "sharenfs": "on", "href": "/api/storage/v1/pools/Pool1/projects/default", "sharesmb": "off", "default_permissions": "700", "mountpoint": "/export", "snaplabel": "", "id": "c0328965-7819-edd1-0000-000000000000", "readonly": false, "space_data": 147456.0, "compression": "off", "defaultuserquota": 0.0, "source": {"snapdir": "inherited", "logbias": "inherited", "shareobjectstore": "local", "dedup": "inherited", "sharenfs": "local", "sharesmb": "local", "mountpoint": "local", "compression": "inherited", "sharetftp": "local", "encryption": "local", "sharedav": "local", "copies": "inherited", "aclinherit": "inherited", "shareftp": "local", "readonly": "inherited", "keychangedate": "inherited", "secondarycache": "inherited", "maxblocksize": "inherited", "exported": "local", "vscan": "inherited", "reservation": "local", "atime": "inherited", "recordsize": "inherited", "checksum": "inherited", "sharesftp": "local", "nbmand": "inherited", "aclmode": "inherited", "rstchown": "inherited"}, "default_sparse": false, "encryption": "off", "aclmode": "discard", "copies": 1, "aclinherit": "restricted", "compressratio": 100.0, "shareftp": "", "canonical_name": "Pool1/local/default", "recordsize": 131072.0, "keychangedate": "", "space_available": 68707386220544.0, "secondarycache": "all", "shareobjectstore": "", "name": "default", "space_snapshots": 0.0, "space_unused_res": 0.0, "quota": 0.0, "maxblocksize": 1048576, "exported": true, "default_volsize": 0.0, "vscan": false, "reservation": 0.0, "keystatus": "none", "atime": true, "pool": "Pool1", "default_user": "nobody", "space_unused_res_shares": 0.0, "sharetftp": "", "checksum": "fletcher4", "space_total": 147456.0, "default_group": "other", "sharesftp": "", "rstchown": true, "sharedav": "", "nbmand": false},
+{"snapdir": "visible", "default_volblocksize": 8192.0, "defaultgroupquota": 0.0, "logbias": "throughput", "creation": "20200708T04:26:13", "nodestroy": false, "dedup": false, "sharenfs": "sec=sys,rw,anon=root", "href": "/api/storage/v1/pools/Pool1/projects/GODB", "sharesmb": "off", "default_permissions": "777", "mountpoint": "/export", "snaplabel": "", "id": "cb301b62-86a6-216b-0000-000000000000", "readonly": false, "space_data": 180222652416.0, "compression": "off", "defaultuserquota": 0.0, "source": {"snapdir": "local", "logbias": "local", "shareobjectstore": "local", "dedup": "inherited", "sharenfs": "local", "sharesmb": "local", "mountpoint": "local", "compression": "inherited", "sharetftp": "local", "encryption": "local", "sharedav": "local", "copies": "inherited", "aclinherit": "inherited", "shareftp": "local", "readonly": "inherited", "keychangedate": "inherited", "secondarycache": "inherited", "maxblocksize": "inherited", "exported": "local", "vscan": "inherited", "reservation": "local", "atime": "inherited", "recordsize": "inherited", "checksum": "inherited", "sharesftp": "local", "nbmand": "inherited", "aclmode": "inherited", "rstchown": "local"}, "default_sparse": false, "encryption": "off", "aclmode": "discard", "copies": 1, "aclinherit": "restricted", "compressratio": 100.0, "shareftp": "", "canonical_name": "Pool1/local/GODB", "recordsize": 131072.0, "keychangedate": "", "space_available": 68707386220544.0, "secondarycache": "all", "shareobjectstore": "", "name": "GODB", "space_snapshots": 516809203712.0, "space_unused_res": 0.0, "quota": 0.0, "maxblocksize": 1048576, "exported": true, "default_volsize": 0.0, "vscan": false, "reservation": 0.0, "keystatus": "none", "atime": true, "pool": "Pool1", "default_user": "oracle", "space_unused_res_shares": 0.0, "sharetftp": "", "checksum": "fletcher4", "space_total": 697031856128.0, "default_group": "1002", "sharesftp": "", "rstchown": false, "sharedav": "", "nbmand": false},
+{"snapdir": "hidden", "default_volblocksize": 8192.0, "defaultgroupquota": 0.0, "logbias": "latency", "creation": "20200708T07:15:58", "nodestroy": false, "dedup": false, "sharenfs": "on", "href": "/api/storage/v1/pools/Pool1/projects/EXA122V1", "sharesmb": "off", "default_permissions": "700", "mountpoint": "/export", "snaplabel": "", "id": "e8fb7bd7-7e89-c843-0000-000000000000", "readonly": false, "space_data": 442368.0, "compression": "off", "defaultuserquota": 0.0, "source": {"snapdir": "inherited", "logbias": "inherited", "shareobjectstore": "local", "dedup": "inherited", "sharenfs": "local", "sharesmb": "local", "mountpoint": "local", "compression": "inherited", "sharetftp": "local", "encryption": "local", "sharedav": "local", "copies": "inherited", "aclinherit": "inherited", "shareftp": "local", "readonly": "inherited", "keychangedate": "inherited", "secondarycache": "inherited", "maxblocksize": "inherited", "exported": "local", "vscan": "inherited", "reservation": "local", "atime": "inherited", "recordsize": "inherited", "checksum": "inherited", "sharesftp": "local", "nbmand": "inherited", "aclmode": "inherited", "rstchown": "inherited"}, "default_sparse": false, "encryption": "off", "aclmode": "discard", "copies": 1, "aclinherit": "restricted", "compressratio": 100.0, "shareftp": "", "canonical_name": "Pool1/local/EXA122V1", "recordsize": 131072.0, "keychangedate": "", "space_available": 68707386220544.0, "secondarycache": "all", "shareobjectstore": "", "name": "EXA122V1", "space_snapshots": 0.0, "space_unused_res": 0.0, "quota": 0.0, "maxblocksize": 1048576, "exported": true, "default_volsize": 0.0, "vscan": false, "reservation": 0.0, "keystatus": "none", "atime": true, "pool": "Pool1", "default_user": "nobody", "space_unused_res_shares": 0.0, "sharetftp": "", "checksum": "fletcher4", "space_total": 442368.0, "default_group": "other", "sharesftp": "", "rstchown": true, "sharedav": "", "nbmand": false}]}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool2/projects
+HTTP/1.1 404 Not Found
+Date: Fri, 10 Jul 2020 06:29:20 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Length: 220
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+
+{"fault": {"message": "the requested item was not found (EAK_ZFS_NOENT: call for param #1 to system.push failed: call for param #1 to array.create failed: no such dataset or pool)", "code": 404, "name": "ERR_NOT_FOUND"}}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool1/projects/UPGR/filesystems
+HTTP/1.1 404 Not Found
+Date: Fri, 10 Jul 2020 06:29:22 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Length: 220
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+
+{"fault": {"message": "the requested item was not found (EAK_ZFS_NOENT: call for param #1 to system.push failed: call for param #1 to array.create failed: no such dataset or pool)", "code": 404, "name": "ERR_NOT_FOUND"}}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool1/projects/CDB2/filesystems
+HTTP/1.1 404 Not Found
+Date: Fri, 10 Jul 2020 06:29:22 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Length: 220
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+
+{"fault": {"message": "the requested item was not found (EAK_ZFS_NOENT: call for param #1 to system.push failed: call for param #1 to array.create failed: no such dataset or pool)", "code": 404, "name": "ERR_NOT_FOUND"}}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool1/projects/ORCL/filesystems
+HTTP/1.1 404 Not Found
+Date: Fri, 10 Jul 2020 06:29:26 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Length: 220
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+
+{"fault": {"message": "the requested item was not found (EAK_ZFS_NOENT: call for param #1 to system.push failed: call for param #1 to array.create failed: no such dataset or pool)", "code": 404, "name": "ERR_NOT_FOUND"}}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool1/projects/default/filesystems
+HTTP/1.1 200 OK
+Date: Fri, 10 Jul 2020 06:29:26 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+Transfer-Encoding: chunked
+
+{"filesystems":[]}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool2/projects/UPGR/filesystems
+HTTP/1.1 404 Not Found
+Date: Fri, 10 Jul 2020 06:29:31 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Length: 220
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+
+{"fault": {"message": "the requested item was not found (EAK_ZFS_NOENT: call for param #1 to system.push failed: call for param #1 to array.create failed: no such dataset or pool)", "code": 404, "name": "ERR_NOT_FOUND"}}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool2/projects/CDB2/filesystems
+HTTP/1.1 404 Not Found
+Date: Fri, 10 Jul 2020 06:29:31 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Length: 220
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+
+{"fault": {"message": "the requested item was not found (EAK_ZFS_NOENT: call for param #1 to system.push failed: call for param #1 to array.create failed: no such dataset or pool)", "code": 404, "name": "ERR_NOT_FOUND"}}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool2/projects/ORCL/filesystems
+HTTP/1.1 404 Not Found
+Date: Fri, 10 Jul 2020 06:29:35 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Length: 220
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+
+{"fault": {"message": "the requested item was not found (EAK_ZFS_NOENT: call for param #1 to system.push failed: call for param #1 to array.create failed: no such dataset or pool)", "code": 404, "name": "ERR_NOT_FOUND"}}
+    curl --user root:welcome1 -k -i https://192.168.0.184:215/api/storage/v1/pools/Pool2/projects/default/filesystems
+HTTP/1.1 404 Not Found
+Date: Fri, 10 Jul 2020 06:29:35 GMT
+Server: TwistedWeb/10.1.0
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self'
+Content-Length: 220
+X-Zfssa-Storage-Api: 1.1
+Content-Type: application/json; charset=utf-8
+X-Zfssa-Api-Version: 1.0
+X-Zfssa-Version: ak/generic@2013.06.05.7.4,1-1.1
+
+{"fault": {"message": "the requested item was not found (EAK_ZFS_NOENT: call for param #1 to system.push failed: call for param #1 to array.create failed: no such dataset or pool)", "code": 404, "name": "ERR_NOT_FOUND"}}

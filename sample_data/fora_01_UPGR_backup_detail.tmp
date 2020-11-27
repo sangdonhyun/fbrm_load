@@ -1,0 +1,7 @@
+SYS@UPGR > 
+SYS@UPGR > SELECT  * from V$SESSION_LONGOPS;
+
+no rows selected
+
+SYS@UPGR > 
+SYS@UPGR > spool off

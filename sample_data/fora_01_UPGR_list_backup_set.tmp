@@ -1,0 +1,10 @@
+SYS@UPGR > 
+SYS@UPGR > select * from v$backup_files;
+select * from v$backup_files
+              *
+ERROR at line 1:
+ORA-01219: database or pluggable database not open: queries allowed on fixed tables or views only
+
+
+SYS@UPGR > 
+SYS@UPGR > spool off
